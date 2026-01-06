@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="શ્રી બુટ ભવાની માતાજી સાથે સંપર્ક કરો. રાસ્કા ગામ, ગુજરાત.">
+    <title>સંપર્ક - શ્રી બુટ ભવાની માતાજી</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onclick="initAudio()">
+
+<audio id="bgMusic" loop><source id="musicSrc" src="" type="audio/mpeg"></audio>
+<div id="musicToggle" class="music-fab" title="સંગીત ચાલુ/બંધ">🔇</div>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+            <span class="nav-logo-icon">🙏</span>
+            <span>શ્રી બુટ ભવાની</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html" class="nav-link">🏠 હોમ</a></li>
+            <li><a href="about.html" class="nav-link">📖 ઇતિહાસ</a></li>
+            <li><a href="gallery.html" class="nav-link">🖼️ ગેલેરી</a></li>
+            <li><a href="donation.html" class="nav-link">🎁 દાન</a></li>
+            <li><a href="contact.html" class="nav-link active">📞 સંપર્ક</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<header class="page-header">
+    <h1>📞 સંપર્ક કરો</h1>
+    <p>અમારા સાથે જોડાઓ - અમે તમારી સેવામાં છીએ</p>
+</header>
+
+<main class="container">
+
+    <!-- Contact Cards -->
+    <section class="contact-grid fade-in-section">
+        <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <h3 class="contact-title">ફોન કરો</h3>
+            <p class="contact-text">
+                <a href="tel:+919876543210" style="color: var(--primary); text-decoration: none;">+91 98765 43210</a><br>
+                <a href="tel:+919876543211" style="color: var(--primary); text-decoration: none;">+91 98765 43211</a>
+            </p>
+        </div>
+        
+        <div class="contact-item">
+            <div class="contact-icon">📩</div>
+            <h3 class="contact-title">WhatsApp</h3>
+            <p class="contact-text">
+                <a href="https://wa.me/919876543210" target="_blank" style="color: #25d366; text-decoration: none; font-weight: 600;">
+                    WhatsApp પર મેસેજ કરો
+                </a>
+            </p>
+        </div>
+        
+        <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <h3 class="contact-title">સ્થળ</h3>
+            <p class="contact-text">
+                શ્રી બુટ ભવાની મંદિર,<br>
+                રાસ્કા ગામ, ગુજરાત
+            </p>
+        </div>
+    </section>
+
+    <!-- Committee Members -->
+    <section class="card fade-in-section">
+        <h2 class="section-title">👥 કાર્યકર્તાઓ</h2>
+        
+        <div class="committee-grid">
+            <div class="committee-card">
+                <div class="committee-avatar">👤</div>
+                <h4>ભુવા શ્રી</h4>
+                <p class="committee-role">ઘનશ્યામભાઈ બાબુભાઈ તલસાણિયા</p>
+                <a href="tel:+919876543210" class="committee-phone">📞 સંપર્ક કરો</a>
+            </div>
+            
+            <div class="committee-card">
+                <div class="committee-avatar">👤</div>
+                <h4>પાઠીયાર શ્રી</h4>
+                <p class="committee-role">શામજીભાઈ વાલજીભાઈ શાકોડિયા</p>
+                <a href="tel:+919876543211" class="committee-phone">📞 સંપર્ક કરો</a>
+            </div>
+<!--             
+            <div class="committee-card">
+                <div class="committee-avatar">👤</div>
+                <h4>પ્રમુખ</h4>
+                <p class="committee-role">મંદિર સમિતિ</p>
+                <a href="tel:+919876543212" class="committee-phone">📞 સંપર્ક કરો</a>
+            </div>
+            
+            <div class="committee-card">
+                <div class="committee-avatar">👤</div>
+                <h4>ખજાનચી</h4>
+                <p class="committee-role">મંદિર સમિતિ</p>
+                <a href="tel:+919876543213" class="committee-phone">📞 સંપર્ક કરો</a>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="card fade-in-section">
+        <h2 class="section-title">✉️ સંદેશ મોકલો</h2>
+        
+        <form class="contact-form" id="contactForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label">તમારું નામ *</label>
+                    <input type="text" class="form-input" name="name" required placeholder="તમારું નામ લખો">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">મોબાઇલ નંબર *</label>
+                    <input type="tel" class="form-input" name="mobile" required placeholder="તમારો મોબાઇલ નંબર">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">વિષય *</label>
+                <select class="form-select" name="subject" required>
+                    <option value="">વિષય પસંદ કરો</option>
+                    <option value="દાન સંબંધિત">દાન સંબંધિત</option>
+                    <option value="ઉત્સવ માહિતી">ઉત્સવ માહિતી</option>
+                    <option value="સ્વયંસેવક">સ્વયંસેવક</option>
+                    <option value="સૂચન/ફરિયાદ">સૂચન/ફરિયાદ</option>
+                    <option value="અન્ય">અન્ય</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">તમારો સંદેશ *</label>
+                <textarea class="form-textarea" name="message" required placeholder="તમારો સંદેશ અહીં લખો..."></textarea>
+            </div>
+
+            <button type="submit" class="form-btn">સંદેશ મોકલો 📨</button>
+        </form>
+    </section>
+
+    <!-- Map Section -->
+    <section class="card fade-in-section">
+        <h2 class="section-title">🗺️ મંદિરનું સ્થળ</h2>
+        <div class="map-placeholder">
+            <div class="map-icon">🗺️</div>
+            <h3>શ્રી બુટ ભવાની મંદિર</h3>
+            <p>રાસ્કા ગામ, ગુજરાત</p>
+            <a href="https://maps.google.com/?q=Raska,Gujarat" target="_blank" class="map-btn">
+                📍 Google Maps માં જુઓ
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <h3>શ્રી બુટ ભવાની માતાજી</h3>
+            <p>રાસ્કા પરિવાર</p>
+        </div>
+        <div class="footer-links">
+            <a href="index.html">હોમ</a>
+            <a href="about.html">ઇતિહાસ</a>
+            <a href="gallery.html">ગેલેરી</a>
+            <a href="donation.html">દાન</a>
+            <a href="contact.html">સંપર્ક</a>
+        </div>
+        <div class="footer-copy">
+            © ૨૦૨૬ શ્રી બુટ ભવાની રાસ્કા પરિવાર | જય માતાજી 🙏
+        </div>
+    </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="ઉપર જાઓ">↑</button>
+
+<script src="script.js"></script>
+<script>
+// Contact Form submission
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const formData = new FormData(contactForm);
+        const data = Object.fromEntries(formData);
+        
+        // Create WhatsApp message
+        const message = `📩 *સંપર્ક ફોર્મ*%0A%0Aનામ: ${data.name}%0Aમોબાઇલ: ${data.mobile}%0Aવિષય: ${data.subject}%0A%0Aસંદેશ: ${data.message}`;
+        
+        window.open(`https://wa.me/917405515040?text=${message}`, '_blank');
+        contactForm.reset();
+    });
+}
+</script>
+
+<style>
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+.committee-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.committee-card {
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #fff5f5, #fffaf5);
+    border-radius: var(--radius);
+    border: 2px solid #ffe0e0;
+    transition: var(--transition);
+}
+
+.committee-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+    box-shadow: var(--shadow);
+}
+
+.committee-avatar {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.committee-card h4 {
+    color: var(--primary-dark);
+    margin-bottom: 5px;
+}
+
+.committee-role {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+.committee-phone {
+    display: inline-block;
+    padding: 8px 20px;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.committee-phone:hover {
+    background: var(--primary-dark);
+}
+
+.map-placeholder {
+    text-align: center;
+    padding: 60px 30px;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    border-radius: var(--radius);
+}
+
+.map-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.map-placeholder h3 {
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+}
+
+.map-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background: #4285f4;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.map-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(66, 133, 244, 0.4);
+}
+</style>
+</body>
+</html>

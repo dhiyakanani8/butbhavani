@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="શ્રી બુટ ભવાની માતાજી મંદિર માટે દાન આપો. તમારા ફાળાથી મંદિર નિર્માણમાં યોગદાન આપો.">
+    <title>દાન આપો - શ્રી બુટ ભવાની માતાજી</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onclick="initAudio()">
+
+<audio id="bgMusic" loop><source id="musicSrc" src="" type="audio/mpeg"></audio>
+<div id="musicToggle" class="music-fab" title="સંગીત ચાલુ/બંધ">🔇</div>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+            <span class="nav-logo-icon">🙏</span>
+            <span>શ્રી બુટ ભવાની</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html" class="nav-link">🏠 હોમ</a></li>
+            <li><a href="about.html" class="nav-link">📖 ઇતિહાસ</a></li>
+            <li><a href="gallery.html" class="nav-link">🖼️ ગેલેરી</a></li>
+            <li><a href="donation.html" class="nav-link active">🎁 દાન</a></li>
+            <li><a href="contact.html" class="nav-link">📞 સંપર્ક</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<header class="page-header">
+    <h1>🎁 દાન / ફાળો</h1>
+    <p>મા ભવાનીના મંદિર નિર્માણમાં યોગદાન આપો</p>
+</header>
+
+<main class="container">
+
+    <!-- Total Collection -->
+    <section class="total-card fade-in-section" style="border-radius: var(--radius-lg); margin-bottom: 30px;">
+        <div class="total-icon">💰</div>
+        <div class="total-label">કુલ એકત્રિત ફાળો</div>
+        <div id="totalVal" class="total-val"><div class="loader"></div></div>
+        <p class="total-blessing">🌺 મા ભવાની સૌનું કલ્યાણ કરે 🌺</p>
+    </section>
+
+    <!-- Recent Donors -->
+    <section class="card fade-in-section">
+        <h2 class="section-title">📜 તાજેતરના દાતાઓ</h2>
+        <div id="mainList" class="donor-list">
+            <div class="loader-container"><div class="loader"></div></div>
+        </div>
+    </section>
+    <!-- Donation Form -->
+    <!-- <section class="card fade-in-section">
+        <h2 class="section-title">🙏 દાન આપો</h2>
+        
+        <div class="donation-options">
+            <div class="donation-card">
+                <div class="donation-icon">🏠</div>
+                <h3>મંદિર નિર્માણ</h3>
+                <p>મંદિરના નિર્માણ કાર્ય માટે</p>
+            </div>
+            <div class="donation-card">
+                <div class="donation-icon">🙏</div>
+                <h3>મૂર્તિ પ્રતિષ્ઠા</h3>
+                <p>માતાજીની મૂર્તિ માટે</p>
+            </div>
+            <div class="donation-card">
+                <div class="donation-icon">🎉</div>
+                <h3>ઉત્સવ ખર્ચ</h3>
+                <p>મહોત્સવના ખર્ચ માટે</p>
+            </div>
+            <div class="donation-card">
+                <div class="donation-icon">🍚</div>
+                <h3>ભોજન/પ્રસાદ</h3>
+                <p>મહાપ્રસાદ માટે</p>
+            </div>
+        </div>
+
+        <form class="donation-form" id="donationForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label">તમારું નામ *</label>
+                    <input type="text" class="form-input" name="name" required placeholder="તમારું પૂરું નામ લખો">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">મોબાઇલ નંબર *</label>
+                    <input type="tel" class="form-input" name="mobile" required placeholder="તમારો મોબાઇલ નંબર">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label">ગામ *</label>
+                    <input type="text" class="form-input" name="village" required placeholder="તમારા ગામનું નામ">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">દાનની રકમ (₹) *</label>
+                    <input type="number" class="form-input" name="amount" required placeholder="રકમ લખો">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">દાનનો હેતુ</label>
+                <select class="form-select" name="purpose">
+                    <option value="સામાન્ય દાન">સામાન્ય દાન</option>
+                    <option value="મંદિર નિર્માણ">મંદિર નિર્માણ</option>
+                    <option value="મૂર્તિ પ્રતિષ્ઠા">મૂર્તિ પ્રતિષ્ઠા</option>
+                    <option value="ઉત્સવ ખર્ચ">ઉત્સવ ખર્ચ</option>
+                    <option value="ભોજન/પ્રસાદ">ભોજન/પ્રસાદ</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">વધારાની નોંધ (જો હોય તો)</label>
+                <textarea class="form-textarea" name="note" placeholder="કોઈ ખાસ સંદેશ કે નોંધ હોય તો અહીં લખો"></textarea>
+            </div>
+
+            <button type="submit" class="form-btn">દાન નોંધાવો 🙏</button>
+        </form>
+    </section> -->
+
+    <!-- Payment Methods -->
+    <!-- <section class="card fade-in-section">
+        <h2 class="section-title">💳 દાન આપવાની રીત</h2>
+        
+        <div class="payment-methods">
+            <div class="payment-card">
+                <div class="payment-icon">📱</div>
+                <h3>UPI / Google Pay / PhonePe</h3>
+                <p class="upi-id">example@upi</p>
+                <small>આ UPI ID પર દાન મોકલો</small>
+            </div>
+            
+            <div class="payment-card">
+                <div class="payment-icon">🏦</div>
+                <h3>બેંક ટ્રાન્સફર</h3>
+                <div class="bank-details">
+                    <p><strong>બેંક:</strong> State Bank of India</p>
+                    <p><strong>ખાતા નંબર:</strong> 1234567890</p>
+                    <p><strong>IFSC:</strong> SBIN0001234</p>
+                    <p><strong>ખાતાનું નામ:</strong> Shri But Bhavani Mandir</p>
+                </div>
+            </div>
+            
+            <div class="payment-card">
+                <div class="payment-icon">💵</div>
+                <h3>રોકડ દાન</h3>
+                <p>રોકડ દાન માટે અમારા કાર્યકર્તાનો સંપર્ક કરો</p>
+                <a href="contact.html" class="contact-link">સંપર્ક કરો →</a>
+            </div>
+        </div>
+    </section> -->
+
+    
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <h3>શ્રી બુટ ભવાની માતાજી</h3>
+            <p>રાસ્કા પરિવાર</p>
+        </div>
+        <div class="footer-links">
+            <a href="index.html">હોમ</a>
+            <a href="about.html">ઇતિહાસ</a>
+            <a href="gallery.html">ગેલેરી</a>
+            <a href="donation.html">દાન</a>
+            <a href="contact.html">સંપર્ક</a>
+        </div>
+        <div class="footer-copy">
+            © ૨૦૨૬ શ્રી બુટ ભવાની રાસ્કા પરિવાર | જય માતાજી 🙏
+        </div>
+    </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="ઉપર જાઓ">↑</button>
+
+<script src="script.js"></script>
+<script>
+// Form submission
+const donationForm = document.getElementById('donationForm');
+if (donationForm) {
+    donationForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const formData = new FormData(donationForm);
+        const data = Object.fromEntries(formData);
+        
+        // Create WhatsApp message
+        const message = `🙏 *નવું દાન*%0A%0Aનામ: ${data.name}%0Aમોબાઇલ: ${data.mobile}%0Aગામ: ${data.village}%0Aરકમ: ₹${data.amount}%0Aહેતુ: ${data.purpose}%0Aનોંધ: ${data.note || 'નથી'}`;
+        
+        window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+        donationForm.reset();
+    });
+}
+</script>
+
+<style>
+.donation-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.donation-card {
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #fff7e6, #fffcf5);
+    border-radius: var(--radius);
+    border: 2px solid var(--gold);
+    transition: var(--transition);
+}
+
+.donation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.donation-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.donation-card h3 {
+    color: var(--primary-dark);
+    margin-bottom: 8px;
+}
+
+.donation-card p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.donation-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+.payment-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.payment-card {
+    text-align: center;
+    padding: 30px;
+    background: var(--white);
+    border-radius: var(--radius);
+    border: 2px solid #eee;
+    transition: var(--transition);
+}
+
+.payment-card:hover {
+    border-color: var(--gold);
+    box-shadow: var(--shadow);
+}
+
+.payment-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.payment-card h3 {
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+}
+
+.upi-id {
+    background: #f5f5f5;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.bank-details {
+    text-align: left;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.bank-details p {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.contact-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+</style>
+</body>
+</html>

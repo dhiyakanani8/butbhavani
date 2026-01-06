@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="શ્રી બુટ ભવાની માતાજી - ફોટો ગેલેરી. મંદિર, મૂર્તિ, ઉત્સવ અને ભક્તિના ફોટા.">
+    <title>ફોટો ગેલેરી - શ્રી બુટ ભવાની માતાજી</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onclick="initAudio()">
+
+<audio id="bgMusic" loop><source id="musicSrc" src="" type="audio/mpeg"></audio>
+<div id="musicToggle" class="music-fab" title="સંગીત ચાલુ/બંધ">🔇</div>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+            <span class="nav-logo-icon">🙏</span>
+            <span>શ્રી બુટ ભવાની</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html" class="nav-link">🏠 હોમ</a></li>
+            <li><a href="about.html" class="nav-link">📖 ઇતિહાસ</a></li>
+            <li><a href="gallery.html" class="nav-link active">🖼️ ગેલેરી</a></li>
+            <li><a href="donation.html" class="nav-link">🎁 દાન</a></li>
+            <li><a href="contact.html" class="nav-link">📞 સંપર્ક</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<header class="page-header">
+    <h1>🖼️ ફોટો ગેલેરી</h1>
+    <p>માતાજીના દર્શન, મંદિર અને ઉત્સવના ફોટા</p>
+</header>
+
+<main class="container">
+
+    <!-- Gallery Filters -->
+    <section class="card fade-in-section">
+        <div class="gallery-filters">
+            <button class="filter-btn active" data-filter="all">બધા</button>
+            <button class="filter-btn" data-filter="mandir">મંદિર</button>
+            <button class="filter-btn" data-filter="murti">મૂર્તિ</button>
+            <button class="filter-btn" data-filter="utsav">ઉત્સવ</button>
+            <button class="filter-btn" data-filter="bhakti">ભક્તિ</button>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="card fade-in-section">
+        <div class="gallery-grid" id="galleryGrid">
+            <!-- Sample Gallery Items -->
+            <div class="gallery-item" data-category="mandir">
+                <div class="gallery-placeholder">
+                    <div class="placeholder-icon">🛝</div>
+                    <span>મંદિર દર્શન</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="murti">
+                <div class="gallery-placeholder">
+                    <div class="placeholder-icon">🙏</div>
+                    <span>માતાજીની મૂર્તિ</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="utsav">
+                <div class="gallery-placeholder">
+                    <div class="placeholder-icon">🎉</div>
+                    <span>ઉત્સવ કાર્યક્રમ</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="bhakti">
+                <div class="gallery-placeholder">
+                    <div class="placeholder-icon">🎶</div>
+                    <span>ભક્તિ સંગીત</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="mandir">
+                <div class="gallery-placeholder">
+                    <div class="placeholder-icon">🌅</div>
+                    <span>મંદિર સૂર્યોદય</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="utsav">
+                <div class="gallery-placeholder">
+                    <div class="placeholder-icon">🚩</div>
+                    <span>ધ્વજારોહણ</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="bhakti">
+                <div class="gallery-placeholder">
+                    <div class="placeholder-icon">🕯️</div>
+                    <span>આરતી</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="murti">
+                <div class="gallery-placeholder">
+                    <div class="placeholder-icon">🌸</div>
+                    <span>શૃંગાર</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="gallery-notice">
+            <div class="notice-icon">📸</div>
+            <h3>ફોટા ટૂંક ઉમેરાશે</h3>
+            <p>મહોત્સવ પછી અહીં બધા ફોટા અને વિડિયો ઉપલબ્ધ કરવામાં આવશે.</p>
+            <p class="notice-date">📅 ૨૯ જાન્યુઆરી, ૨૦૨૬ પછી</p>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="card video-section fade-in-section">
+        <h2 class="section-title" style="color: white;">🎬 વિડિયો ગેલેરી</h2>
+        <div class="video-grid">
+            <div class="video-placeholder">
+                <div class="video-icon">▶️</div>
+                <p>માતાજીના દર્શન</p>
+            </div>
+            <div class="video-placeholder">
+                <div class="video-icon">▶️</div>
+                <p>ભક્તિ ગીતો</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upload Section -->
+    <section class="card fade-in-section">
+        <h2 class="section-title">📷 તમારા ફોટા શેર કરો</h2>
+        <div class="upload-area">
+            <div class="upload-icon">☁️</div>
+            <p>જો તમારી પાસે માતાજી કે ઉત્સવના ફોટા હોય તો અમને WhatsApp પર મોકલો</p>
+            <a href="https://wa.me/91405515040?text=હું%20માતાજીના%20ફોટા%20શેર%20કરવા%20માંગું%20છું" class="upload-btn" target="_blank">
+                📤 WhatsApp પર મોકલો
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img src="" alt="" id="lightbox-img">
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <h3>શ્રી બુટ ભવાની માતાજી</h3>
+            <p>રાસ્કા પરિવાર</p>
+        </div>
+        <div class="footer-links">
+            <a href="index.html">હોમ</a>
+            <a href="about.html">ઇતિહાસ</a>
+            <a href="gallery.html">ગેલેરી</a>
+            <a href="donation.html">દાન</a>
+            <a href="contact.html">સંપર્ક</a>
+        </div>
+        <div class="footer-copy">
+            © ૨૦૨૬ શ્રી બુટ ભવાની રાસ્કા પરિવાર | જય માતાજી 🙏
+        </div>
+    </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="ઉપર જાઓ">↑</button>
+
+<script src="script.js"></script>
+<script>
+// Gallery Filter
+const filterBtns = document.querySelectorAll('.filter-btn');
+const galleryItems = document.querySelectorAll('.gallery-item');
+
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        const filter = btn.getAttribute('data-filter');
+        
+        galleryItems.forEach(item => {
+            if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
+});
+</script>
+
+<style>
+.gallery-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.filter-btn {
+    padding: 10px 25px;
+    border: 2px solid var(--gold);
+    background: transparent;
+    color: var(--primary-dark);
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--gold);
+    color: var(--primary-dark);
+}
+
+.gallery-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #fff5f5, #fff8e7);
+    border: 2px dashed var(--gold);
+    border-radius: var(--radius);
+}
+
+.placeholder-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.gallery-placeholder span {
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.gallery-notice {
+    text-align: center;
+    padding: 40px;
+    margin-top: 30px;
+    background: linear-gradient(135deg, #fff7e6, #fffcf5);
+    border-radius: var(--radius);
+    border: 2px dashed var(--gold);
+}
+
+.notice-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.gallery-notice h3 {
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+}
+
+.notice-date {
+    margin-top: 15px;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.upload-area {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+    border-radius: var(--radius);
+    border: 2px dashed #4caf50;
+}
+
+.upload-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.upload-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background: #25d366;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.upload-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+}
+</style>
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="શ્રી બુટ ભવાની માતાજી મૂર્તિ પ્રતિષ્ઠા મહોત્સવ - રાસ્કા ૨૦૨૬. ૨૮-૨૯ જાન્યુઆરી ૨૦૨૬ ના રોજ ભવ્ય ઉત્સવ.">
+    <meta name="keywords" content="બુટ ભવાની, રાસ્કા, મૂર્તિ પ્રતિષ્ઠા, માતાજી, ગુજરાત, હિન્દુ મંદિર">
+    <meta name="author" content="શ્રી બુટ ભવાની રાસ્કા પરિવાર">
+    <meta property="og:title" content="શ્રી બુટ ભવાની માતાજી - રાસ્કા ૨૦૨૬">
+    <meta property="og:description" content="મૂર્તિ પ્રતિષ્ઠા મહોત્સવ - ૨૮-૨૯ જાન્યુઆરી ૨૦૨૬">
+    <meta property="og:type" content="website">
+    <title>શ્રી બુટ ભવાની માતાજી - રાસ્કા ૨૦૨૬</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onclick="initAudio()">
+
+<audio id="bgMusic" loop><source id="musicSrc" src="" type="audio/mpeg"></audio>
+<div id="musicToggle" class="music-fab" title="સંગીત ચાલુ/બંધ">🔇</div>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+            <span class="nav-logo-icon">🙏</span>
+            <span>શ્રી બુટ ભવાની</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html" class="nav-link active">🏠 હોમ</a></li>
+            <li><a href="about.html" class="nav-link">📖 ઇતિહાસ</a></li>
+            <li><a href="gallery.html" class="nav-link">🖼️ ગેલેરી</a></li>
+            <li><a href="donation.html" class="nav-link">🎁 દાન</a></li>
+            <li><a href="contact.html" class="nav-link">📞 સંપર્ક</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Header -->
+<header class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-content fade-in">
+        <div class="mantra-top animate-float">॥ શ્રી ગણેશાય નમઃ ॥ ॥ શ્રી શક્તિ માતાજી ॥</div>
+        <h1 class="main-title slide-up">શ્રી બુટ ભવાની માતાજી<br>મૂર્તિ પ્રતિષ્ઠા મહોત્સવ</h1>
+        <div class="hero-badge pulse">રાસ્કા ૨૦૨૬</div>
+        
+        <div class="countdown-container slide-up-delay" id="timer">
+            <div class="count-box">
+                <span class="count-num" id="days">00</span>
+                <span class="count-label">દિવસ</span>
+            </div>
+            <div class="count-box">
+                <span class="count-num" id="hours">00</span>
+                <span class="count-label">કલાક</span>
+            </div>
+            <div class="count-box">
+                <span class="count-num" id="mins">00</span>
+                <span class="count-label">મિનિટ</span>
+            </div>
+            <div class="count-box">
+                <span class="count-num" id="secs">00</span>
+                <span class="count-label">સેકન્ડ</span>
+            </div>
+        </div>
+        
+        <a href="#main-content" class="scroll-indicator">
+            <span>નીચે સ્ક્રોલ કરો</span>
+            <div class="scroll-arrow">↓</div>
+        </a>
+    </div>
+</header>
+
+<main class="container" id="main-content">
+
+    <!-- Quick Stats -->
+    <!-- <section class="stats-section fade-in-section">
+        <div class="stat-card">
+            <div class="stat-icon">🗓️</div>
+            <div class="stat-value">૨</div>
+            <div class="stat-label">દિવસનો ઉત્સવ</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">🙏</div>
+            <div class="stat-value" id="donorCount">--</div>
+            <div class="stat-label">દાતાઓ</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">🏘️</div>
+            <div class="stat-value">રાસ્કા</div>
+            <div class="stat-label">ગામ</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">📅</div>
+            <div class="stat-value">૨૯</div>
+            <div class="stat-label">જાન્યુઆરી ૨૦૨૬</div>
+        </div>
+    </section> -->
+    <!-- Internal CSS for Main Donors Section -->
+
+    <!-- Bhuva & Pathiyar Details -->
+    <section class="card person-section fade-in-section">
+        <div class="person-grid">
+            <div class="person-item">
+                <div class="person-icon">🙏</div>
+                <div class="person-role">ભુવા શ્રી</div>
+                <div class="person-name">ઘનશ્યામભાઈ બાબુભાઈ તલસાણિયા</div>
+            </div>
+            <div class="person-item">
+                <div class="person-icon">📿</div>
+                <div class="person-role">પાઠીયાર શ્રી</div>
+                <div class="person-name">શામજીભાઈ વાલજીભાઈ શાકોડિયા</div>
+            </div>
+        </div>
+    </section>
+    <!-- Lucky Families Section -->
+    <section class="card fade-in-section">
+        <h2 class="section-title">🚩 લાભ લેનાર ભાગ્યશાળી પરિવારો 🚩</h2>
+        <div class="boli-list">
+            <div class="boli-item">
+                <div class="boli-info">
+                    <span class="boli-tag">મુખ્ય પાટલા ૧ ની બોલી</span>
+                    <span class="boli-user">યુવરાજસિંહ મહેન્દ્રસિંહ ઝાલા</span>
+                </div>
+                <div class="boli-amt">₹ ૧,૧૯,૦૦૦</div>
+            </div>
+            <div class="boli-item">
+                <div class="boli-info">
+                    <span class="boli-tag">કળશની બોલી</span>
+                    <span class="boli-user">ભરવાડ સમાજ (ડાંગર + ગમારા)</span>
+                </div>
+                <div class="boli-amt">₹ ૫૫,૦૦૦</div>
+            </div>
+            <div class="boli-item">
+                <div class="boli-info">
+                    <span class="boli-tag">ધ્વજ દંડની બોલી</span>
+                    <span class="boli-user">કમલેશભાઈ કાનાણી, મહેશભાઈ રતોજા, સહદેવભાઈ સાબલિયા</span>
+                </div>
+                <div class="boli-amt">₹ ૪૧,૦૦૦</div>
+            </div>
+            <div class="boli-item">
+                <div class="boli-info">
+                    <span class="boli-tag">મુખ્ય આરતીની બોલી</span>
+                    <span class="boli-user">ઘનશ્યામભાઈ તલસાણિયા (ભુવા શ્રી), પોપટભાઈ કાનજીભાઈ તલસાણીયા</span>
+                </div>
+                <div class="boli-amt">₹ ૨૫,૦૦૦</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Donors Section Structure -->
+    <section class="card fade-in-section main-donors">
+        <h2 class="section-title">🙏 મુખ્ય દાતાશ્રીઓ</h2>
+
+        <div class="donor-grid">
+            <!-- Donor 1 -->
+            <div class="donor-card-item">
+                <div>
+                    <div class="donor-icon-circle">🍽️</div>
+                    <div class="donor-name">શ્વિઠ્ઠલભાઈ ભૂરાભાઈ કાનાણી</div>
+                    <div class="donor-detail-box">
+                        <span class="detail-label">દાનનો પ્રકાર</span>
+                        <span class="detail-value">ભોજન સેવા (જમણવાર)</span>
+                    </div>
+                </div>
+                <div class="date-badge">📅 ૨૯ જાન્યુઆરી ૨૦૨૬</div>
+            </div>
+
+            <!-- Donor 2 -->
+            <div class="donor-card-item">
+                <div>
+                    <div class="donor-icon-circle">🍲</div>
+                    <div class="donor-name">ભરતસિંહ કેદારસિંહ ઝાલા</div>
+                    <div class="donor-detail-box">
+                        <span class="detail-label">દાનનો પ્રકાર</span>
+                        <span class="detail-value">ભોજન સેવા (જમણવાર)</span>
+                    </div>
+                </div>
+                <div class="date-badge">📅 ૩૦ જાન્યુઆરી ૨૦૨૬</div>
+            </div>
+
+            <!-- Donor 3 -->
+            <div class="donor-card-item">
+                <div>
+                    <div class="donor-icon-circle">🔥</div>
+                    <div class="donor-name">જેરમભાઈ પ્રેમજીભાઈ સબાળિયા</div>
+                    <div class="donor-detail-box">
+                        <span class="detail-label">યજ્ઞ સેવા</span>
+                        <span class="detail-value">૫૦ કિલોગ્રામ શુદ્ધ ઘી દાન</span>
+                    </div>
+                </div>
+                <div class="date-badge">✨ પવિત્ર આહુતિ</div>
+            </div>
+        </div>
+
+        <div class="gratitude-text">
+            <p>
+                મંદિરના નવ નિર્માણ, મૂર્તિ પ્રતિષ્ઠા મહોત્સવ તથા યજ્ઞવિધિ જેવા પવિત્ર કાર્યોમાં
+                આપેલ આ મહાન દાન માટે તમામ દાતાશ્રીઓ પ્રત્યે <strong>મંદિર સમિતિ તથા સમગ્ર રાસ્કા ગામ</strong>
+                હૃદયપૂર્વક આભાર વ્યક્ત કરે છે. <br><strong>🙏 જય બુટ ભવાની મા 🙏</strong>
+            </p>
+        </div>
+    </section>
+        
+    
+    <!-- Schedule Timeline -->
+    <section class="card fade-in-section">
+        <h2 class="section-title">📅 ઉત્સવ કાર્યક્રમ વિગત</h2>
+        
+        <div class="timeline">
+            <div class="timeline-day">
+                <div class="day-tag">🗓️ ૨૮-૦૧-૨૦૨૬ (બુધવાર)</div>
+                <div class="timeline-events">
+                    <div class="event-item">
+                        <div class="event-time">૦૯:૩૦ AM</div>
+                        <div class="event-title">નગરયાત્રા (નગર ભ્રમણ)</div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-time">૦૫:૦૦ PM</div>
+                        <div class="event-title">દેહ શુદ્ધિ કાર્યક્રમ</div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-time">૦૬:૦૦ PM</div>
+                        <div class="event-title">ધાન્ય નિવાસ માતાજી વિધિ</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="timeline-day">
+                <div class="day-tag highlight">🗓️ ૨૯-૦૧-૨૦૨૬ (ગુરુવાર) - મુખ્ય દિવસ</div>
+                <div class="timeline-events">
+                    <div class="event-item">
+                        <div class="event-time">૦૭:૦૦ AM</div>
+                        <div class="event-title">સ્થાપિત દેવીનું પૂજન</div>
+                    </div>
+                    <div class="event-item main-event">
+                        <div class="event-time">૧૦:૩૦ AM</div>
+                        <div class="event-title">🙏 મૂર્તિ પ્રતિષ્ઠા મહોત્સવ</div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-time">૧૨:૦૦ PM</div>
+                        <div class="event-title">મહાપ્રસાદ (ભોજન સમારંભ)</div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-time">૦૪:૩૦ PM</div>
+                        <div class="event-title">પટલા ની પૂર્ણાહુતિ</div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-time">૦૬:૩૦ PM</div>
+                        <div class="event-title">મહાપ્રસાદ</div>
+                    </div>
+                    <div class="event-item special">
+                        <div class="event-time">૦૯:૩૦ PM</div>
+                        <div class="event-title">🎭 ભવ્ય ડાકલા-ડમરુ કાર્યક્રમ</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-day">
+                <div class="day-tag">🗓️ ૩૦-૦૧-૨૦૨૬ (શુક્રવાર)</div>
+                <div class="timeline-events">
+                    <div class="event-item">
+                        <div class="event-time">૦૯:૩૦ AM</div>
+                        <div class="event-title">મંડપ (માંડવો) પૂર્ણાહુતિ વિધિ</div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-time">૧૨:૦૦ PM</div>
+                        <div class="event-title">મહાપ્રસાદ (ભોજન સમારંભ)</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <!-- Video Section -->
+    <section class="card video-section fade-in-section">
+        <h2 class="section-title">🎬 વિડિયો સેક્શન</h2>
+        <div class="video-placeholder">
+            <div class="video-icon">▶️</div>
+            <p>માતાજીના દર્શન અને ભક્તિ ગીતો</p>
+            <small>વિડિયો ટૂંક સમયમાં ઉપલબ્ધ થશે</small>
+        </div>
+    </section>
+    <!-- Video Section -->
+    <section class="card video-section fade-in-section">
+        <h2 class="section-title">🎬 વિડિયો દર્શન</h2>
+        
+        <div class="video-grid">
+            <!-- Video 1 -->
+            <div class="video-item">
+                <div class="video-container">
+                    <iframe 
+                        src="https://youtu.be/enL8xJ-BS0w?si=jolXSbe9VVJQgzHF" 
+                        title="YouTube video player" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-caption">🙏 માતાજીની ભવ્ય આરતી</div>
+            </div>
+
+            <!-- Video 2 -->
+            <div class="video-item">
+                <div class="video-container">
+                    <iframe 
+                        src="https://youtu.be/6BTFJqMZJ0g?si=cVVut_3TPOZ8WtlJ" 
+                        title="YouTube video player" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-caption">🚩 રાસ્કા મંદિર નવનિર્માણ દર્શન</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Donation Tracker -->
+    <section class="donation-section fade-in-section">
+        <div class="total-card">
+            <div class="total-icon">💰</div>
+            <div class="total-label">કુલ એકત્રિત ફાળો</div>
+            <div id="totalVal" class="total-val"><div class="loader"></div></div>
+            <p class="total-blessing">🌺 મા ભવાની સૌનું કલ્યાણ કરે 🌺</p>
+            <a href="donation.html" class="donate-btn">દાન આપો 🙏</a>
+        </div>
+    </section>
+
+    <!-- Donor List -->
+    <section class="card donor-card fade-in-section">
+        <h2 class="section-title">📜 Online ફાળો આપનારની યાદી</h2>
+        <div class="donor-search">
+            <input type="text" id="searchDonor" placeholder="દાતાનું નામ શોધો..." class="search-input">
+        </div>
+        <div id="mainList" class="donor-list">
+            <div class="loader-container"><div class="loader"></div></div>
+        </div>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <h3>શ્રી બુટ ભવાની માતાજી</h3>
+            <p>રાસ્કા પરિવાર</p>
+        </div>
+        <div class="footer-links">
+            <a href="index.html">હોમ</a>
+            <a href="about.html">ઇતિહાસ</a>
+            <a href="gallery.html">ગેલેરી</a>
+            <a href="donation.html">દાન</a>
+            <a href="contact.html">સંપર્ક</a>
+        </div>
+        <div class="footer-copy">
+            © ૨૦૨૬ શ્રી બુટ ભવાની રાસ્કા પરિવાર | જય માતાજી 🙏
+        </div>
+    </div>
+</footer>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" title="ઉપર જાઓ">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
