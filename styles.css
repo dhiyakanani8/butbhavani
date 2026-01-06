@@ -954,7 +954,7 @@ body {
         background: var(--primary-dark);
         flex-direction: column;
         padding: 20px;
-        gap: 10px;
+        gap: 25px;
         transform: translateY(-150%);
         transition: var(--transition);
         border-bottom: 3px solid var(--gold);
@@ -1372,4 +1372,5 @@ body {
         .donor-grid {
             grid-template-columns: 1fr;
         }
+
     }
