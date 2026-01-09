@@ -1,3 +1,62 @@
+// Add this inside your DOMContentLoaded listener in script.js
+const currentPath = window.location.pathname.split("/").pop() || "index.html";
+const tabLinks = document.querySelectorAll('.tab-item');
+
+tabLinks.forEach(link => {
+    if (link.getAttribute('href') === currentPath) {
+        link.classList.add('active');
+    } else {
+        link.classList.remove('active');
+    }
+});
+
+// ===== DEVOTIONAL FLOWER RAIN SYSTEM =====
+function startFlowerRain() {
+    const container = document.createElement('div');
+    container.className = 'flower-container';
+    document.body.appendChild(container);
+
+    // List of devotional icons/flowers
+    const symbols = ['🌸', '🪷', '🌼', '✨', '🥀', '🚩']; 
+
+    function createPetal() {
+        const petal = document.createElement('div');
+        petal.className = 'petal';
+        
+        // Randomly pick an icon
+        petal.innerText = symbols[Math.floor(Math.random() * symbols.length)];
+
+        // Randomize size, position, and speed
+        const size = Math.random() * (25 - 15) + 15 + 'px';
+        const left = Math.random() * 100 + 'vw';
+        const fallDuration = Math.random() * (10 - 5) + 5 + 's';
+        const swayDuration = Math.random() * (4 - 2) + 2 + 's';
+        const delay = Math.random() * 5 + 's';
+
+        petal.style.fontSize = size;
+        petal.style.left = left;
+        petal.style.animationDuration = `${fallDuration}, ${swayDuration}`;
+        petal.style.animationDelay = delay;
+        petal.style.opacity = Math.random() * (0.8 - 0.4) + 0.4;
+
+        container.appendChild(petal);
+
+        // Remove petal after animation to keep memory clean
+        setTimeout(() => {
+            petal.remove();
+        }, 15000);
+    }
+
+    // Create a new petal every 400ms (adjust for more or less density)
+    setInterval(createPetal, 400);
+}
+
+// Call this function inside your existing DOMContentLoaded listener
+document.addEventListener('DOMContentLoaded', () => {
+    // ... your existing code ...
+    startFlowerRain(); // Start the rain
+});
+
 // ===== COUNTDOWN TIMER =====
 function updateTimer() {
     const targetDate = new Date(2026, 0, 29, 10, 30, 0).getTime();
@@ -34,7 +93,7 @@ const musicSrc = document.getElementById('musicSrc');
 
 if (musicSrc) {
     const randomTrack = Math.floor(Math.random() * 3) + 1;
-    musicSrc.src = `https://raw.githubusercontent.com/dhiyakanani8/donationlist/main/${randomTrack}.mp3`;
+    musicSrc.src = `https://raw.githubusercontent.com/dhiyakanani8/butbhavani/main/${randomTrack}.mpeg`;
     audio.load();
 }
 
